@@ -26,4 +26,8 @@ router.get("/register", (req,res) => {
     res.render("Auth/register.ejs");
 })
 
+router.get("/error", (req,res) => {
+    res.render("Auth/error.ejs");
+})
+
 module.exports = router;

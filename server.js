@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
 require("dotenv").config();
 
@@ -16,6 +17,7 @@ db.on("error", (error) => {
 
 app.set("view-engine", "ejs");
 
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
