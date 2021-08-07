@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 module.exports = function(req,res,next) {
     const token = req.cookies['jwt'];
     if(!token) {
-        return res.send("Access Denied");
+        return res.send("Access Denied! You need to login first");
     }
 
     try {
